@@ -1,9 +1,11 @@
 USE CollegeDB;
 
 -- Check Department table
+SELECT 'Checking Department table...' AS Message;
+
 DESCRIBE Department;
 
--- Check table structure
+-- Check columns
 SELECT
     COLUMN_NAME,
     DATA_TYPE,
@@ -22,10 +24,13 @@ WHERE TABLE_SCHEMA = 'CollegeDB'
 AND TABLE_NAME = 'Department'
 AND CONSTRAINT_NAME = 'PRIMARY';
 
--- Test insertion
+-- Insert test record
 INSERT INTO Department
 (DepartmentID, DepartmentName, HOD)
 VALUES
 (101, 'Computer Science', 'Dr. Kumar');
 
+-- Display result
 SELECT * FROM Department;
+
+SELECT 'AUTOGRADING TEST COMPLETED' AS Result;
