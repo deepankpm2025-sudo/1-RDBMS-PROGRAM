@@ -9,23 +9,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+
+      # 1. Get the student's files
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # 2. Install MySQL
       - name: Install MySQL
         run: |
           sudo apt-get update
-          sudo apt-get install -y mysql-server
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y mysql-server
 
+      # 3. Start MySQL
       - name: Start MySQL
         run: |
           sudo systemctl start mysql
-          sudo mysql -e "SELECT VERSION();"
+          sudo systemctl enable mysql
 
+      # 4. Check MySQL connection
+      - name: Check MySQL
+        run: |
+          sudo mysql -uroot -e "SELECT VERSION();"
+
+      # 5. Run Student SQL Program
       - name: Run Student SQL
         run: |
-          sudo mysql < starter.sql
+          sudo mysql -uroot < starter.sql
 
+      # 6. Run Test SQL
       - name: Run Test SQL
         run: |
-          sudo mysql < test.sql
+          sudo mysql -uroot < test.sql
