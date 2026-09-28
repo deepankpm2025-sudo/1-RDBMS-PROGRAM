@@ -20,6 +20,7 @@ jobs:
       - name: Start MySQL
         run: |
           sudo systemctl start mysql
+          sudo mysql -e "SELECT VERSION();"
 
       - name: Run Student SQL
         run: |
