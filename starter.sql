@@ -1,12 +1,9 @@
--- RDBMS Program
--- Student Name:
--- Register Number:
+CREATE DATABASE CollegeDB;
 
--- Create database CollegeDB
--- Create Department table
--- DepartmentID INT PRIMARY KEY
--- DepartmentName VARCHAR(20)
--- HOD VARCHAR(20)
+USE CollegeDB;
 
--- Write your SQL program below:
-
+CREATE TABLE Department (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(20),
+    HOD VARCHAR(20)
+);
