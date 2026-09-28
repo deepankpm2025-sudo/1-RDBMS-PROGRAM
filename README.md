@@ -1,33 +1,30 @@
-# CollegeDB – Department Table
+# RDBMS Program – CollegeDB Department
 
-## SQL Programming Assignment
+## Problem
 
 Create a database named `CollegeDB` and create a table named `Department`.
 
-### Requirements
+### Table Structure
 
-The database must contain a table named `Department` with the following fields:
-
-| Field | Data Type | Constraint |
+| Column | Data Type | Constraint |
 |---|---|---|
 | DepartmentID | INT | PRIMARY KEY |
 | DepartmentName | VARCHAR(20) | — |
 | HOD | VARCHAR(20) | — |
 
-### Tasks
+## Task
 
-1. Create a database named `CollegeDB`.
-2. Select the `CollegeDB` database.
-3. Create a table named `Department`.
-4. Create the following columns:
-   - `DepartmentID` – INT – PRIMARY KEY
-   - `DepartmentName` – VARCHAR(20)
-   - `HOD` – VARCHAR(20)
-5. Do not add additional columns.
+Write SQL commands to:
 
-### Submission
+1. Create the database `CollegeDB`.
+2. Use the `CollegeDB` database.
+3. Create the `Department` table.
+4. Set `DepartmentID` as the Primary Key.
+5. Set `DepartmentName` as `VARCHAR(20)`.
+6. Set `HOD` as `VARCHAR(20)`.
 
-Create a file named:
+## Submission
 
-```text
-solution.sql
+Write your answer in `starter.sql`.
+
+The program will be automatically checked using the test cases.
