@@ -1,1 +1,11 @@
+CREATE DATABASE Dinesh;
+USE Dinesh;
 
+CREATE TABLE DEPARTMENT (
+    DEPARTMENTID numeric(5) PRIMARY KEY,
+    department VARCHAR(20),
+    hod varchar(20) 
+);
+
+DESC DEPARTMENT;
+SELECT * FROM DEPARTMENT ;
